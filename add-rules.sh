@@ -25,7 +25,7 @@ ufw allow in on eth0 to any port 8099
 
 # 4. limit connetcions to ports 6050–6055
 for port in {6050..6055}; do
-    ufw limit $port
+    ufw limit $port/tcp
 done
 
 # Enable firewall & export configured rules to the file
